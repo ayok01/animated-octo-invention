@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+      "outDir": "./dist/",
+      "sourceMap": true,
+      "noImplicitAny": true,
+      "module": "Node16", 
+      "target": "es5",
+      "jsx": "react",
+      "allowJs": true,
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "moduleResolution": "Node16",
+      "types": ["jest"]
+    },
+    "include": ["src"]
+  }
