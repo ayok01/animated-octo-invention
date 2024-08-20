@@ -4,7 +4,7 @@ import { initScene, removeCube, SceneData } from './components/scene';
 import { startAnimation } from './components/animation';
 
 
-gsap.to('body', { duration: 1, backgroundColor: 'black' });
+gsap.to('body', { duration: 0, backgroundColor: 'black' });
 let sceneData:SceneData |null = null;
 
 sceneData = initScene();
@@ -17,4 +17,4 @@ setTimeout(() => {
 
 setTimeout(() => {
     gsap.to(document.body.style, { duration: 1, backgroundColor: 'white' });
-}, 5000);
+}, 3000);
