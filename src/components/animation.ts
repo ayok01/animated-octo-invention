@@ -1,6 +1,10 @@
 import { gsap } from 'gsap';
 import { SceneData } from './scene';
 
+/**
+ * アニメーションを開始します。
+ * @param sceneData シーンデータ。
+ */
 export function startAnimation(sceneData: SceneData) {
     const { renderer, scene, camera, cube } = sceneData;
 
