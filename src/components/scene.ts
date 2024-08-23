@@ -14,17 +14,18 @@ export interface SceneData {
 export function initScene(): SceneData {
     const scene = new Scene();
     const camera = new PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    const renderer = new WebGLRenderer({ antialias: true });
+    const renderer = new WebGLRenderer({ antialias: true, canvas: document.getElementById('sceneCanvas') as HTMLCanvasElement });
     
+    // レンダラーのサイズを設定
     renderer.setSize(window.innerWidth, window.innerHeight);
-    document.body.appendChild(renderer.domElement);
 
+    // キューブを作成
     const geometry = new BoxGeometry();
-    const material = new MeshBasicMaterial({ color: 0x00ff00 });
+    const material = new MeshBasicMaterial({ color: 0xffffff });
     const cube = new Mesh(geometry, material);
     scene.add(cube);
 
-
+    // カメラの位置を設定
     camera.position.z = 5;
 
     window.addEventListener('resize', onWindowResize);
@@ -37,7 +38,6 @@ export function initScene(): SceneData {
 
     return { scene, camera, renderer, cube };
 }
-
 /**
  * キューブの色を変更します。
  * @param SceneData キューブ
